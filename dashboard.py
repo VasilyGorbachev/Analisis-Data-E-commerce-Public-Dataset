@@ -106,7 +106,6 @@ max_date = all_df["order_purchase_timestamp"].dt.date.max() + datetime.timedelta
 
 # Mengisi sidebar dashboard
 with st.sidebar:
-    st.image("https://e7.pngegg.com/pngimages/675/429/png-clipart-shopping-cart-software-online-shopping-e-commerce-shopping-cart-angle-retail.png")
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
         label='Rentang Tanggal',
