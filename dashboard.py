@@ -90,7 +90,7 @@ def create_rfm_df(df):
     return rfm_df
 
 # Memanggil data CSV
-all_df = pd.read_csv("all_data.csv")
+all_df = pd.read_csv("Dashboard/all_data.csv")
 
 # Mengganti tipe data menjadi datetime
 datetime_columns = ["order_purchase_timestamp", "order_delivered_customer_date"]
@@ -106,6 +106,7 @@ max_date = all_df["order_purchase_timestamp"].dt.date.max() + datetime.timedelta
 
 # Mengisi sidebar dashboard
 with st.sidebar:
+    st.image("https://e7.pngegg.com/pngimages/186/214/png-clipart-shopping-cart-logo-online-shopping-risk-legacy-miniatures-shopping-cart-logo-thumbnail.png")
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
         label='Rentang Tanggal',
@@ -440,3 +441,6 @@ ax[2].tick_params(axis ='y', labelsize=14)
 
 plt.suptitle("Best State Based on RFM Parameters", fontsize=24)
 st.pyplot(fig)
+
+# Caption
+st.caption("(c) Irvan Raditya Ardiansyah")
