@@ -93,11 +93,11 @@ def create_rfm_df(df):
 all_df = pd.read_csv("Dashboard/all_data.csv")
 
 # Mengganti tipe data menjadi datetime
-datetime_columns = ["order_purchase_timestamp", "order_delivered_customer_date"]
-all_df.sort_values(by="order_purchase_timestamp", inplace=True)
-all_df.reset_index(inplace=True)
-for column in datetime_columns:
-    all_df[column] = pd.to_datetime(all_df[column])
+#datetime_columns = ["order_purchase_timestamp", "order_delivered_customer_date"]
+#all_df.sort_values(by="order_purchase_timestamp", inplace=True)
+#all_df.reset_index(inplace=True)
+#for column in datetime_columns:
+ #   all_df[column] = pd.to_datetime(all_df[column])
 
 # ----------------- Membuat komponen filter -------------------------
 
